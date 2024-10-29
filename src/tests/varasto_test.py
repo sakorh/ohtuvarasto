@@ -47,11 +47,11 @@ class TestVarasto(unittest.TestCase):
         varasto = Varasto(10, -1)
         self.assertAlmostEqual(varasto.saldo, 0.0)
 
-    def test_konstruktori_hukkaa_ylimääräisen_alkusaldon(self):
+    def test_konstruktori_hukkaa_ylimaaraisen_alkusaldon(self):
         varasto = Varasto(10,20)
         self.assertAlmostEqual(varasto.saldo, varasto.tilavuus)
 
-    def test_negatiivinen_lisäys_ei_muuta_saldoa(self):
+    def test_negatiivinen_lisays_ei_muuta_saldoa(self):
         self.varasto.lisaa_varastoon(-1)
         self.assertAlmostEqual(self.varasto.saldo, 0)
 
